@@ -1,5 +1,5 @@
-n = int(input('Введите число: '))
+n = input('Введите число: ')
 n2 = str(n)+str(n)
 n3 = str(n)+str(n)+str(n)
-p = n+int(n2)+int(n3)
+p = int(n)+int(n2)+int(n3)
 print(p)
