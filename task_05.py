@@ -1,13 +1,16 @@
-sell = int(input('Введите прибыль: '))
-bue = int(input('Введите издержки: '))
+my_list = [7, 5, 3, 3, 2]
 
-money = sell - bue
-
-if money < 0:
-    print(f'Ваша фирма работает в убыток. потери составляют: {-money}')
-elif money > 0:
-    print(f'Ваша фирма приносит доход. Прибыль составляем {money}')
-    people = int(input('Сколько же человек работает в вашей организации?: '))
-    print(f'Каждый сотрудник приносит вам в среднем: {int(money/people)}')
-else:
-    print(f'Ваша фирма выходит в 0, Вы конечно ничего лишнего не тратите, но и дохода к сожалению тоже нет.')
+print('Для остановки введите: 999')
+stat = 0
+while stat !=999:
+    n = 0
+    print(f"Рейтинг - {my_list}")
+    stat = int(input('Введите новое значение рейтинга: '))
+    for i in my_list:
+        if my_list[n] < stat:
+            my_list.insert(n, stat)
+            break
+        elif my_list[len(my_list) - 1] >= stat:
+            my_list.insert(len(my_list), stat)
+            break
+        n += 1
