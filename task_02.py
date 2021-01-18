@@ -1,16 +1,12 @@
-time = int(input(f'Введите время в секундах: '))
+lot = int(input('Сколько элементов будет в списке: '))
+my_list = list()
 
-h = time//3600
-m = (time//60)%60
-s = time%60
+for i in range(lot):
+    my_list.append(input(f'Введите значение элемента № {i+1}: '))
 
-if m<10:
-    m='0'+str(m)
-else:
-    m=str(m)
-if s<10:
-    s='0'+str(s)
-else:
-    s=str(s)
+n_el = 0
+for m in range(int(len(my_list)/2)):
+    my_list[n_el], my_list[n_el + 1] = my_list[n_el + 1], my_list[n_el]
+    n_el += 2
 
-print(f'в нормальном формате это будет - {h}:{m}:{s}')
+print(my_list)
