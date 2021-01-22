@@ -1,22 +1,10 @@
-month = int(input('Введите номер месяца: '))
+num_1 = int(input('Введите первое число: '))
+num_2 = int(input('Введите второе число: '))
+num_3 = int(input('Введите третье число: '))
 
-season_l = ['Зима', 'Весна', 'Лето', 'Осень']
-season_d = {0 : "Зима",
-             1 : "Весна",
-             2 : "Лето",
-             3 : "Осень"}
+def my_func(n_1, n_2, n_3):
+    my_list = sorted([n_1 + n_2, n_1 + n_3, n_2 + n_3])
+    big_sum = my_list[2]
+    return big_sum
 
-if month == 12 or month == 1 or month == 2:
-    print(season_l[0])
-    print(season_d.get(0))
-elif 3 <= month <= 5:
-    print(season_l[1])
-    print(season_d.get(1))
-elif 6 <= month <= 8:
-    print(season_l[2])
-    print(season_d.get(2))
-elif 9 <= month <= 11:
-    print(season_l[3])
-    print(season_d.get(3))
-else:
-    print('В году всего 12 месяцев')
+print(my_func(num_1, num_2, num_3))

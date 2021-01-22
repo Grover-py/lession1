@@ -1,12 +1,11 @@
-lot = int(input('Сколько элементов будет в списке: '))
-my_list = list()
+def people(first_name, second_name, year_start, citi, email, num_phone):
+    print(f'перед нами {first_name}, {second_name} {year_start} года рождения, проживающий в городе {citi}. Контактная информаия :{email}, {num_phone}')
 
-for i in range(lot):
-    my_list.append(input(f'Введите значение элемента № {i+1}: '))
+first_name = input('Введите Имя: ')
+second_name = input('Введите Фамилию: ')
+year_start = input('Введите год рождения: ')
+citi = input('Введите город проживания: ')
+email = input('Введите Email: ')
+num_phone = input('Введите номер телефона: ')
 
-n_el = 0
-for m in range(int(len(my_list)/2)):
-    my_list[n_el], my_list[n_el + 1] = my_list[n_el + 1], my_list[n_el]
-    n_el += 2
-
-print(my_list)
+people(first_name.title(), second_name.title(), year_start, citi.title(), email, num_phone)

@@ -1,5 +1,22 @@
-my_str = input('Введите данные через пробел: ')
-n = 0
-for i in my_str.split():
-    print(f'{n+1}: {my_str.split()[n][0:10]}')
-    n += 1
+x = int(input('Введите число: '))
+y = int(input('Введите степень: '))
+
+def my_func(x, y):
+    sum = x
+    n = 1
+    if y > 0:
+        while n != y:
+            sum = sum * x
+            n += 1
+    elif y < 0:
+        n = -1
+        while n != y:
+            sum = sum * x
+            n -= 1
+        sum = 1/sum
+    else:
+        sum = 1
+
+    return sum
+
+print(my_func(x,y))
